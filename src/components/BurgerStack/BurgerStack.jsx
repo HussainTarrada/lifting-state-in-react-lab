@@ -1,6 +1,10 @@
+
 const BurgerStack = (props) => {
-    return <ul>
-        <h2>{props.stack.name}</h2>
+    return <ul> {props.stack.map((oneIngerdient)=>
+        <div key={props.stack.name}>
+            <li style={{ backgroundColor: oneIngerdient.color }}>{oneIngerdient.name}</li>
+        </div>
+    )}
     </ul>;
   };
   

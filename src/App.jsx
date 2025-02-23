@@ -24,10 +24,10 @@ const App = () => {
   
   const [stack, setStack] = useState([{name: '', color: ''}])
 
-  async function addToBurger(event){
-    event.preventDefault();
-      setStack([{name: event.name, color: event.color}])
-      console.log(event)
+  async function addToBurger(newIngredient){
+    newIngredient.preventDefault();
+      await setStack([...stack, newIngredient])
+      console.log(newIngredient)
     }
 
 
